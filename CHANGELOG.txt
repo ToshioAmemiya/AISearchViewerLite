@@ -1,0 +1,39 @@
+CHANGELOG.txt
+
+AISearchViewerLite
+==================
+
+v1.0.0  (2025-12-19)
+-------------------
+Initial public release.
+
+- Read-only Excel viewer for safe inspection of .xlsx / .xlsm files
+- Displays all cell values strictly as strings
+  - Prevents unintended date / number conversion
+- Right-click on a cell to search its contents using web browsers
+- Search string normalization before querying
+  - Line breaks removed
+  - Full-width spaces normalized
+  - Consecutive spaces collapsed
+- External configuration via INI files
+  - search_engines.ini for custom search engines
+  - config.ini for default / alternate engine settings
+- Column header click sorting (ascending / descending)
+- Automatic column width adjustment (per column)
+- Zebra row styling for readability
+- Cell-level highlight with border only (row highlight suppressed)
+- Filter box for quick row narrowing
+- Keyboard shortcuts for efficient operation
+  - Enter: search with default engine
+  - Ctrl+Enter: search with alternate engine
+  - Ctrl+C: copy cell text
+  - Ctrl+Shift+C: copy search URL
+  - Ctrl+L: focus filter box
+  - F2 / double-click: show full cell text
+- Windows single-file executable distribution supported
+
+Design principles:
+- Never modify or save Excel files
+- Keep operations simple, predictable, and non-destructive
+- Prioritize safe viewing and fast searching over editing features
+
